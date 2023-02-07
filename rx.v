@@ -126,7 +126,7 @@ module rx#(parameter D_bits=9 ,
                end
              
                else  s_next <= s_reg+1;
-               else  state_next <= state_reg;
+               else state_next <= state_reg;
              default:
                            state_next <= idle;
        endcase   
