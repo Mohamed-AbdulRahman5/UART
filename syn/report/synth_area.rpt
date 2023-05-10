@@ -1,0 +1,31 @@
+ 
+****************************************
+Report : area
+Design : UART
+Version: G-2012.06-SP2
+Date   : Wed May 10 09:10:56 2017
+****************************************
+
+Information: Updating design information... (UID-85)
+Warning: Design 'UART' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Library(s) Used:
+
+    NangateOpenCellLibrary_ss0p95vn40c (File: /home/standard_cell_libraries/NangateOpenCellLibrary_PDKv1_3_v2010_12/lib/Front_End/Liberty/NLDM/NangateOpenCellLibrary_ss0p95vn40c.db)
+
+Number of ports:                           37
+Number of nets:                            58
+Number of cells:                            6
+Number of combinational cells:              1
+Number of sequential cells:                 0
+Number of macros:                           0
+Number of buf/inv:                          1
+Number of references:                       6
+
+Combinational area:       13760.712156
+Buf/Inv area:             1594.670008
+Noncombinational area:    19361.873355
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:          33122.585511
+Total area:                 undefined
+1

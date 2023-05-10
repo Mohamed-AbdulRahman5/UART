@@ -1,0 +1,23 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 1
+Design : UART
+Version: G-2012.06-ICC-SP2
+Date   : Wed May 10 11:02:25 2017
+****************************************
+
+ * Some/all delay information is back-annotated.
+
+Operating Conditions: worst_low   Library: NangateOpenCellLibrary_ss0p95vn40c
+	Parasitic source    : LPE
+	Parasitic mode      : RealRC
+	Extraction mode     : MIN_MAX
+	Extraction derating : -40/-40/-40
+
+Information: Percent of Arnoldi-based delays =  0.00%
+No paths.
+
+1

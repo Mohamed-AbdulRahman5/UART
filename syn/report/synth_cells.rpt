@@ -1,0 +1,33 @@
+ 
+****************************************
+Report : cell
+Design : UART
+Version: G-2012.06-SP2
+Date   : Wed May 10 09:10:56 2017
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    p - parameterized
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+U3                        INV_X1          NangateOpenCellLibrary_ss0p95vn40c
+                                                          0.532000  
+Uart_reciever             rx_D_bits9_sb_tick16            183.540004
+                                                                    h, n, p
+Uart_transmitter          tx_D_bits9_sb_tick16            190.190004
+                                                                    h, n, p
+baud_rate                 timer_bits10                    121.828002
+                                                                    h, n, p
+rx_fifo                   asyn_fifo_top_word_width8_0     14851.843758
+                                                                    h, n, p
+tx_fifo                   asyn_fifo_top_word_width8_1     17774.651743
+                                                                    h, n, p
+--------------------------------------------------------------------------------
+Total 6 cells                                             33122.585511
+1

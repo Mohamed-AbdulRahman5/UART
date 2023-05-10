@@ -1,0 +1,394 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 10
+Design : UART
+Version: G-2012.06-SP2
+Date   : Wed May 10 09:10:56 2017
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: worst_low   Library: NangateOpenCellLibrary_ss0p95vn40c
+Wire Load Model Mode: top
+
+  Startpoint: rx (input port clocked by clk)
+  Endpoint: rx_err (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               5K_hvratio_1_1        NangateOpenCellLibrary_ss0p95vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    4.00       4.00 r
+  rx (in)                                                 0.00       4.00 r
+  Uart_reciever/rx (rx_D_bits9_sb_tick16)                 0.00       4.00 r
+  Uart_reciever/U80/Z (XOR2_X1)                           0.06       4.06 r
+  Uart_reciever/U14/ZN (AND4_X1)                          0.06       4.12 r
+  Uart_reciever/rx_err (rx_D_bits9_sb_tick16)             0.00       4.12 r
+  rx_err (out)                                            0.00       4.12 r
+  data arrival time                                                  4.12
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock uncertainty                                      -0.50       9.50
+  output external delay                                  -2.00       7.50
+  data required time                                                 7.50
+  --------------------------------------------------------------------------
+  data required time                                                 7.50
+  data arrival time                                                 -4.12
+  --------------------------------------------------------------------------
+  slack (MET)                                                        3.38
+
+
+  Startpoint: rx (input port clocked by clk)
+  Endpoint: fr_err (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               5K_hvratio_1_1        NangateOpenCellLibrary_ss0p95vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    4.00       4.00 f
+  rx (in)                                                 0.00       4.00 f
+  Uart_reciever/rx (rx_D_bits9_sb_tick16)                 0.00       4.00 f
+  Uart_reciever/U32/ZN (INV_X1)                           0.03       4.03 r
+  Uart_reciever/U16/ZN (AND2_X1)                          0.04       4.07 r
+  Uart_reciever/fr_err (rx_D_bits9_sb_tick16)             0.00       4.07 r
+  fr_err (out)                                            0.00       4.07 r
+  data arrival time                                                  4.07
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock uncertainty                                      -0.50       9.50
+  output external delay                                  -2.00       7.50
+  data required time                                                 7.50
+  --------------------------------------------------------------------------
+  data required time                                                 7.50
+  data arrival time                                                 -4.07
+  --------------------------------------------------------------------------
+  slack (MET)                                                        3.43
+
+
+  Startpoint: baud_final[4]
+              (input port clocked by clk)
+  Endpoint: rx_done (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               5K_hvratio_1_1        NangateOpenCellLibrary_ss0p95vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 r
+  baud_final[4] (in)                                      0.00       2.00 r
+  baud_rate/final[4] (timer_bits10)                       0.00       2.00 r
+  baud_rate/U56/Z (XOR2_X1)                               0.05       2.05 r
+  baud_rate/U19/ZN (NAND3_X1)                             0.04       2.09 f
+  baud_rate/U13/ZN (NOR4_X1)                              0.05       2.14 r
+  baud_rate/U10/ZN (NAND4_X1)                             0.10       2.24 f
+  baud_rate/U3/ZN (INV_X1)                                0.10       2.34 r
+  baud_rate/tkl (timer_bits10)                            0.00       2.34 r
+  Uart_reciever/s_tick (rx_D_bits9_sb_tick16)             0.00       2.34 r
+  Uart_reciever/U7/ZN (NAND2_X1)                          0.06       2.39 f
+  Uart_reciever/U17/ZN (NOR2_X1)                          0.04       2.44 r
+  Uart_reciever/rx_done (rx_D_bits9_sb_tick16)            0.00       2.44 r
+  rx_done (out)                                           0.00       2.44 r
+  data arrival time                                                  2.44
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock uncertainty                                      -0.50       9.50
+  output external delay                                  -2.00       7.50
+  data required time                                                 7.50
+  --------------------------------------------------------------------------
+  data required time                                                 7.50
+  data arrival time                                                 -2.44
+  --------------------------------------------------------------------------
+  slack (MET)                                                        5.06
+
+
+  Startpoint: rx (input port clocked by clk)
+  Endpoint: Uart_reciever/state_reg_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               5K_hvratio_1_1        NangateOpenCellLibrary_ss0p95vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    4.00       4.00 f
+  rx (in)                                                 0.00       4.00 f
+  Uart_reciever/rx (rx_D_bits9_sb_tick16)                 0.00       4.00 f
+  Uart_reciever/U55/ZN (OAI21_X1)                         0.04       4.04 r
+  Uart_reciever/U54/ZN (INV_X1)                           0.03       4.06 f
+  Uart_reciever/U34/ZN (OAI21_X1)                         0.04       4.10 r
+  Uart_reciever/U21/ZN (INV_X1)                           0.03       4.13 f
+  Uart_reciever/U18/ZN (AOI211_X1)                        0.08       4.21 r
+  Uart_reciever/U35/ZN (OAI221_X1)                        0.05       4.26 f
+  Uart_reciever/state_reg_reg[0]/D (DFFR_X1)              0.01       4.27 f
+  data arrival time                                                  4.27
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock uncertainty                                      -0.50       9.50
+  Uart_reciever/state_reg_reg[0]/CK (DFFR_X1)             0.00       9.50 r
+  library setup time                                     -0.04       9.46
+  data required time                                                 9.46
+  --------------------------------------------------------------------------
+  data required time                                                 9.46
+  data arrival time                                                 -4.27
+  --------------------------------------------------------------------------
+  slack (MET)                                                        5.20
+
+
+  Startpoint: rx (input port clocked by clk)
+  Endpoint: Uart_reciever/state_reg_reg[1]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               5K_hvratio_1_1        NangateOpenCellLibrary_ss0p95vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    4.00       4.00 f
+  rx (in)                                                 0.00       4.00 f
+  Uart_reciever/rx (rx_D_bits9_sb_tick16)                 0.00       4.00 f
+  Uart_reciever/U55/ZN (OAI21_X1)                         0.04       4.04 r
+  Uart_reciever/U54/ZN (INV_X1)                           0.03       4.06 f
+  Uart_reciever/U34/ZN (OAI21_X1)                         0.04       4.10 r
+  Uart_reciever/U21/ZN (INV_X1)                           0.03       4.13 f
+  Uart_reciever/U18/ZN (AOI211_X1)                        0.08       4.21 r
+  Uart_reciever/U50/ZN (OAI21_X1)                         0.04       4.25 f
+  Uart_reciever/state_reg_reg[1]/D (DFFR_X1)              0.01       4.26 f
+  data arrival time                                                  4.26
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock uncertainty                                      -0.50       9.50
+  Uart_reciever/state_reg_reg[1]/CK (DFFR_X1)             0.00       9.50 r
+  library setup time                                     -0.03       9.47
+  data required time                                                 9.47
+  --------------------------------------------------------------------------
+  data required time                                                 9.47
+  data arrival time                                                 -4.26
+  --------------------------------------------------------------------------
+  slack (MET)                                                        5.21
+
+
+  Startpoint: rx (input port clocked by clk)
+  Endpoint: Uart_reciever/s_reg_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               5K_hvratio_1_1        NangateOpenCellLibrary_ss0p95vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    4.00       4.00 f
+  rx (in)                                                 0.00       4.00 f
+  Uart_reciever/rx (rx_D_bits9_sb_tick16)                 0.00       4.00 f
+  Uart_reciever/U55/ZN (OAI21_X1)                         0.04       4.04 r
+  Uart_reciever/U54/ZN (INV_X1)                           0.03       4.06 f
+  Uart_reciever/U52/ZN (NAND2_X1)                         0.03       4.09 r
+  Uart_reciever/U20/ZN (OAI21_X1)                         0.05       4.14 f
+  Uart_reciever/U41/ZN (OAI22_X1)                         0.05       4.19 r
+  Uart_reciever/s_reg_reg[0]/D (DFFR_X1)                  0.01       4.20 r
+  data arrival time                                                  4.20
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock uncertainty                                      -0.50       9.50
+  Uart_reciever/s_reg_reg[0]/CK (DFFR_X1)                 0.00       9.50 r
+  library setup time                                     -0.04       9.46
+  data required time                                                 9.46
+  --------------------------------------------------------------------------
+  data required time                                                 9.46
+  data arrival time                                                 -4.20
+  --------------------------------------------------------------------------
+  slack (MET)                                                        5.26
+
+
+  Startpoint: rx (input port clocked by clk)
+  Endpoint: Uart_reciever/s_reg_reg[1]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               5K_hvratio_1_1        NangateOpenCellLibrary_ss0p95vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    4.00       4.00 f
+  rx (in)                                                 0.00       4.00 f
+  Uart_reciever/rx (rx_D_bits9_sb_tick16)                 0.00       4.00 f
+  Uart_reciever/U55/ZN (OAI21_X1)                         0.04       4.04 r
+  Uart_reciever/U54/ZN (INV_X1)                           0.03       4.06 f
+  Uart_reciever/U52/ZN (NAND2_X1)                         0.03       4.09 r
+  Uart_reciever/U20/ZN (OAI21_X1)                         0.05       4.14 f
+  Uart_reciever/U45/ZN (OAI22_X1)                         0.05       4.19 r
+  Uart_reciever/s_reg_reg[1]/D (DFFR_X1)                  0.01       4.20 r
+  data arrival time                                                  4.20
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock uncertainty                                      -0.50       9.50
+  Uart_reciever/s_reg_reg[1]/CK (DFFR_X1)                 0.00       9.50 r
+  library setup time                                     -0.04       9.46
+  data required time                                                 9.46
+  --------------------------------------------------------------------------
+  data required time                                                 9.46
+  data arrival time                                                 -4.20
+  --------------------------------------------------------------------------
+  slack (MET)                                                        5.26
+
+
+  Startpoint: rx (input port clocked by clk)
+  Endpoint: Uart_reciever/s_reg_reg[2]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               5K_hvratio_1_1        NangateOpenCellLibrary_ss0p95vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    4.00       4.00 f
+  rx (in)                                                 0.00       4.00 f
+  Uart_reciever/rx (rx_D_bits9_sb_tick16)                 0.00       4.00 f
+  Uart_reciever/U55/ZN (OAI21_X1)                         0.04       4.04 r
+  Uart_reciever/U54/ZN (INV_X1)                           0.03       4.06 f
+  Uart_reciever/U52/ZN (NAND2_X1)                         0.03       4.09 r
+  Uart_reciever/U20/ZN (OAI21_X1)                         0.05       4.14 f
+  Uart_reciever/U46/ZN (OAI22_X1)                         0.05       4.19 r
+  Uart_reciever/s_reg_reg[2]/D (DFFR_X1)                  0.01       4.20 r
+  data arrival time                                                  4.20
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock uncertainty                                      -0.50       9.50
+  Uart_reciever/s_reg_reg[2]/CK (DFFR_X1)                 0.00       9.50 r
+  library setup time                                     -0.04       9.46
+  data required time                                                 9.46
+  --------------------------------------------------------------------------
+  data required time                                                 9.46
+  data arrival time                                                 -4.20
+  --------------------------------------------------------------------------
+  slack (MET)                                                        5.26
+
+
+  Startpoint: rx (input port clocked by clk)
+  Endpoint: Uart_reciever/s_reg_reg[3]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               5K_hvratio_1_1        NangateOpenCellLibrary_ss0p95vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    4.00       4.00 f
+  rx (in)                                                 0.00       4.00 f
+  Uart_reciever/rx (rx_D_bits9_sb_tick16)                 0.00       4.00 f
+  Uart_reciever/U55/ZN (OAI21_X1)                         0.04       4.04 r
+  Uart_reciever/U54/ZN (INV_X1)                           0.03       4.06 f
+  Uart_reciever/U52/ZN (NAND2_X1)                         0.03       4.09 r
+  Uart_reciever/U20/ZN (OAI21_X1)                         0.05       4.14 f
+  Uart_reciever/U43/ZN (OAI22_X1)                         0.05       4.19 r
+  Uart_reciever/s_reg_reg[3]/D (DFFR_X1)                  0.01       4.20 r
+  data arrival time                                                  4.20
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock uncertainty                                      -0.50       9.50
+  Uart_reciever/s_reg_reg[3]/CK (DFFR_X1)                 0.00       9.50 r
+  library setup time                                     -0.04       9.46
+  data required time                                                 9.46
+  --------------------------------------------------------------------------
+  data required time                                                 9.46
+  data arrival time                                                 -4.20
+  --------------------------------------------------------------------------
+  slack (MET)                                                        5.27
+
+
+  Startpoint: rx (input port clocked by clk)
+  Endpoint: Uart_reciever/parity_reg_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               5K_hvratio_1_1        NangateOpenCellLibrary_ss0p95vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    4.00       4.00 f
+  rx (in)                                                 0.00       4.00 f
+  Uart_reciever/rx (rx_D_bits9_sb_tick16)                 0.00       4.00 f
+  Uart_reciever/U80/Z (XOR2_X1)                           0.07       4.07 f
+  Uart_reciever/U59/ZN (AND2_X1)                          0.04       4.11 f
+  Uart_reciever/U57/ZN (AOI22_X1)                         0.05       4.15 r
+  Uart_reciever/U56/ZN (INV_X1)                           0.02       4.17 f
+  Uart_reciever/parity_reg_reg/D (DFFR_X1)                0.01       4.18 f
+  data arrival time                                                  4.18
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock uncertainty                                      -0.50       9.50
+  Uart_reciever/parity_reg_reg/CK (DFFR_X1)               0.00       9.50 r
+  library setup time                                     -0.03       9.47
+  data required time                                                 9.47
+  --------------------------------------------------------------------------
+  data required time                                                 9.47
+  data arrival time                                                 -4.18
+  --------------------------------------------------------------------------
+  slack (MET)                                                        5.29
+
+
+1
